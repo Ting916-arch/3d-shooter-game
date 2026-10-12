@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星际突击 3D</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="gameWrapper">
+      <canvas id="gameCanvas"></canvas>
+
+      <div id="hud">
+        <div class="panel left">
+          <div>分数 <span id="score">0</span></div>
+          <div>波次 <span id="wave">1</span></div>
+        </div>
+
+        <div class="panel right">
+          <div class="hp-label">护盾</div>
+          <div class="hp-bar">
+            <div id="healthFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="startOverlay" class="overlay">
+        <div class="card">
+          <h1>星际突击 3D</h1>
+          <p>W / S / A / D 控制飞行</p>
+          <p>鼠标移动瞄准，按住左键或空格射击</p>
+          <p>击败敌机，抵御无尽袭击</p>
+          <button id="startBtn">开始战斗</button>
+        </div>
+      </div>
+
+      <div id="gameOverOverlay" class="overlay hidden">
+        <div class="card game-over">
+          <h2>舰体损毁</h2>
+          <p>最终分数：<span id="finalScore">0</span></p>
+          <button id="restartBtn">再来一局</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
